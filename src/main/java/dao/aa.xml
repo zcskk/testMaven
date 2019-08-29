@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="dao.Type1_Dao">  
+
+<select id="select" resultType="model.Type" parameterType="java.lang.String">
+ select Type.*,book.name bookname from type inner join book on type.bookid=book.id ${_parameter}
+ </select>
+ 
+ <insert id="insert" parameterType="model.Type">
+ insert into type(name,status,bookid) values(#{name},#{status},#{bookid})
+ </insert> 
+ <update id="update" parameterType="model.Type">
+ update type set name=#{name},status=#{status},bookid=#{bookid} where id=#{id}
+ </update>
+ <delete id="delete" parameterType="int">
+ delete from type where id=#{id}
+ </delete>
+ </mapper>

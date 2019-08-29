@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class BookController {
 
-	@RequestMapping("index")
+	@RequestMapping("index1")
 	public String tojsp( String id ) {
 		System.out.println(id);
 		return "index";
