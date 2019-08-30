@@ -24,7 +24,7 @@ function del(id) {
 <input name="txt" type="text">
 <input type="submit">
 </form>
-<a href="add">新增</a>
+<a href="add">新增1</a>
 <table>
 <tr><td>id</td><td>名字</td><td>性别</td><td>类型</td><td>修改</td></tr>
 <c:forEach items="${list}" var="row">
