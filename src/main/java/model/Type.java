@@ -2,7 +2,7 @@ package model;
 
 public class Type {
  
-	private int id;
+	private int id=1;
 	private int bookid;
 	private String name;
 	public static String[] statuslist= {"艺术","理科","文科"};

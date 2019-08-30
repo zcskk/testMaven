@@ -34,6 +34,11 @@ public class Type_Service_Impl implements Type_Service{
 		// TODO Auto-generated method stub
 		dao.delete(id);
 	}
+
+	public Type selectbyid(int id) {
+		// TODO Auto-generated method stub
+		return dao.selectbyid(id);
+	}
 	
 	
 }

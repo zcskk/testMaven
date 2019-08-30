@@ -38,7 +38,7 @@ public class Book {
 		this.typename = typename;
 	}
 	private String typename;
-	public String getsexname() {
+	public String getSexname() {
 		return sexs[sex];
 	}
 }

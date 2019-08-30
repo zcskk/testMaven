@@ -26,9 +26,9 @@ function del(id) {
 </form>
 <a href="add">新增</a>
 <table>
-<tr><td>id</td><td>名字</td><td>类型</td><td>书名</td><td>修改</td></tr>
+<tr><td>id</td><td>名字</td><td>性别</td><td>类型</td><td>修改</td></tr>
 <c:forEach items="${list}" var="row">
-<tr><td>${row.id }</td><td>${row.name }</td><td>${row.statusname }</td><td>${row.bookname }</td>
+<tr><td>${row.id }</td><td>${row.name }</td><td>${row.sexname }</td><td>${row.typename }</td>
 <td><a href="upd?id=${row.id}">修改</a><a href="javascript:del(${row.id})">删除</a></td></tr>
 </c:forEach>
 </table>
