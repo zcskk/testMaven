@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import dao.Book_Dao;
 import dao.Type1_Dao;
 import model.Type;
+import service.Book1_Service;
 import service.Type_Service;
 
 @Controller
@@ -16,7 +17,7 @@ public class TypeController {
 	@Autowired
 	Type_Service service;
 	@Autowired
-	Book_Dao bdao;
+	Book1_Service bservice;
 	
 	@RequestMapping("index")
 	public String select(String txt,ModelMap m) {
@@ -29,7 +30,7 @@ public class TypeController {
 	@RequestMapping("add")
 	public String add(ModelMap m) {
 		m.put("statuslist", Type.statuslist);
-		m.put("booklist", bdao.select(""));
+		m.put("booklist", bservice.select("",null,null));
 		return "editor";
 	}
 	@RequestMapping("upd")
@@ -39,7 +40,7 @@ public class TypeController {
 	}
 	@RequestMapping("insert")
 	public String insert(Type t,ModelMap m) {
-		System.out.println("fffff");
+		
 		service.insert(t);
 		return select(null, m);
 	}
