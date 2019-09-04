@@ -56,7 +56,6 @@ public class Type_controller {
 	
 	@PostMapping("Type/insert")
 	public @ResponseBody ReturnInfo  insert(Type b) {
-		System.out.println("ffffff");
 		service.insert(b);
 		return index("",null,null);
 	}

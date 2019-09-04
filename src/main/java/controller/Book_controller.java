@@ -40,7 +40,6 @@ public class Book_controller  {
 	
 	@PostMapping("Book")
 	public @ResponseBody ReturnInfo  insert(Book b) {
-		System.out.println("4444");
 		service.insert(b);
 		return index("",null,null);
 	}

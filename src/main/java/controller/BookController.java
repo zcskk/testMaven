@@ -1,5 +1,7 @@
 package controller;
 
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -28,6 +30,7 @@ public class BookController {
 		return "Book/index";
 	}
 
+	@RequiresPermissions("add")
 	@RequestMapping("add")
 	public String add(ModelMap m) {
 		m.put("sexlist", Book.sexs);
